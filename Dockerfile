@@ -47,9 +47,6 @@ RUN set -ex \
         && make -C /usr/src/redis \
         && make -C /usr/src/redis install \
         \
-        && rm -r /usr/src/redis \
-        \
-        && apt-get purge -y --auto-remove $buildDeps
-
+        && rm -r /usr/src/redis
 
 EXPOSE 6379
